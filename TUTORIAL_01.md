@@ -43,7 +43,7 @@ Amazon Nova Canvas offers several key features:
 2. **Image Quality Controls**
    - Standard quality: Faster generation, suitable for prototyping
    - Premium quality: Higher fidelity, better for final outputs
-   - Customizable dimensions up to 1280x720 pixels
+   - Customizable dimensions up to 1024x1024 pixels
 
 3. **Generation Parameters**
    - CFG Scale (1-10): Controls how closely the image follows the prompt
@@ -69,9 +69,11 @@ Before we start coding, let's understand the key parameters that control image g
   - "premium": Higher quality, better details, slower generation
 
 - `dimensions`:
-  - `width`: 512 to 1280 pixels
-  - `height`: 512 to 720 pixels
-  - Common ratios: 1:1 (1024x1024), 16:9 (1280x720)
+  - `width`: 256 to 1024 pixels
+  - `height`: 256 to 1024 pixels
+  - Common ratios: 1:1 (1024x1024), 16:9 (1024x576)
+  - Must be multiples of 8
+  - Recommended starting point: 512x512 for testing
 
 - `cfgScale`: Classifier Free Guidance Scale
   - Range: 1.0 to 10.0
